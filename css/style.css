@@ -101,6 +101,7 @@ body {
     cursor: pointer;
 }
 
+
 .favorite-toggle {
     display: none;
 }
@@ -114,7 +115,9 @@ body {
 .heart {
     font-size: 24px;
     transition: 0.2s;
-    padding-left: 80%;
+    position: absolute;
+    top:10px;
+    right: 10px;
 }
 
 
@@ -126,6 +129,7 @@ body {
 }
 
 .poster {
+    position: relative;
     background-color: #1e1e1e;
     border:1px solid #333333;
     border-radius:10px;
