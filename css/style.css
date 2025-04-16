@@ -1,0 +1,158 @@
+
+.body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#121212;
+    color:#ffffff;
+}
+
+/* To this */
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#242424;
+    color:#ffffff;
+}
+
+
+.header{
+    background-color:#000000;
+    padding:15px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    font-size:30px;
+    font-weight:bold;
+    color:#646cff;
+}
+
+.nav-lists{
+    font-size:20px;
+}
+
+.nav ul {
+    list-style-type:none;
+    padding:0;
+    display:flex;
+}
+
+.nav ul li{
+    margin: 0 15px;
+}
+
+.nav a {
+    color: #646cff;
+    text-decoration:none;
+}
+
+.nav a:hover {
+    text-decoration:underline;
+}
+
+/* Search bar styles */
+
+.search-container {
+    display:flex;
+    justify-content:center;
+    margin:50px auto;
+    border-color:#333333;
+}
+
+.search-container input{
+    padding: 20px 15px ;
+    border: 1px solid #333333;
+    border-right: none;
+    border-radius:5px 0 0 5px;
+    width: 400px;
+    outline: none;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.search-container button {
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: 1px solid #333333;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    margin-left:10px;
+}
+
+
+
+
+.search-container button:hover {
+    background-color:darkred;
+}
+
+
+/* Movie Posters */
+
+
+.favorite-label {
+    cursor: pointer;
+}
+
+
+.favorite-toggle {
+    display: none;
+}
+
+.favorite-toggle:checked + .heart {
+    content: "❤️";
+    color: red;
+    font-size: 24px;
+}
+
+.heart {
+    font-size: 24px;
+    transition: 0.2s;
+    position: absolute;
+    top:10px;
+    right: 10px;
+
+}
+
+
+
+.movie-posters {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.poster {
+    position: relative;
+    background-color: #1e1e1e;
+    border:1px solid #333333;
+    border-radius:10px;
+    margin:10px;
+    padding:10px;
+    width:30%;
+    max-width:400px;
+    text-align:center;
+}
+
+.poster img {
+    width: 100%;
+    border-radius:5px;
+}
+
+.movie-title {
+    font-size: 16px;
+    margin:10px 0 5px 0;
+    color:white;
+}
+
+.release-year {
+    font-size: 14px;
+    color:white;
+}
