@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import './App.css'
 
 // Created a Array of Friends
 const initialFriends = [
@@ -9,7 +10,7 @@ const initialFriends = [
   {
     id:1,
     name:"Ashish",
-    // image:"./src/img/poster1.jpg",
+    image:"https://i.pravatar.cc/50",
     balance: -50
   },
 
@@ -23,7 +24,7 @@ const initialFriends = [
   {
     id:3,
     name:"Shekhar",
-    // image:"./src/img/poster6.jpg",
+    image:"https://i.pravatar.cc/55",
     balance:0
   }
 ]
@@ -35,7 +36,9 @@ function Button({children, onClick}){
 export default function App() {
   const [friends, setFriends] = useState(initialFriends);
   const [showAddFriend, setShowAddFriend] = useState(false);
-
+  const [selectedFriend, setSelectedFriend] = useState(null);
+  
+  
   function handleShowAddFriend() {
     setShowAddFriend(!showAddFriend);
     // we can use this also 
@@ -48,16 +51,23 @@ export default function App() {
     // setShowAddFriend(!showAddFriend);
   }
 
+  function handleSelection(friend) {
+    setSelectedFriend(friend);
+  }
+
   return (
     <div className="split-app">
       <div className="sidebar">
-      <FriendsList friends={friends}/>
+      <FriendsList friends={friends} onSelection=
+      {handleSelection} />
+
       {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
       <Button onClick={handleShowAddFriend}> 
         {showAddFriend ? 'Close' : 'Add friend'} 
       </Button>
+
       </div>
-      <FormSplitBill />  
+      {selectedFriend && <FormSplitBill />  }
     </div>
 
     
@@ -65,13 +75,14 @@ export default function App() {
   );
 }
 
-function FriendsList({friends}){
+function FriendsList({friends, onSelection}){
   
 
   return (
     <ul>
       {friends.map((friend)=>(
-        <Friend friend={friend} key={friend.id}/>
+        <Friend friend={friend} key={friend.id}
+        onSelection={onSelection} />
       ))}
     </ul>
   );
@@ -97,7 +108,9 @@ function Friend({friend}) {
 
     {friend.balance === 0 && <p> You and {friend.name} are even </p>}
 
-      <button className="button">Select</button>
+      <Button onClick={() => onSelection(friend)}>Select</Button>
+
+
   </li>
   );
 }
@@ -122,6 +135,7 @@ function FormAddFriend(onAddFriend) {
       id,
     };
     
+   
 
     onAddFriend(newFriend); // to add the new friend to the list
 
@@ -129,7 +143,8 @@ function FormAddFriend(onAddFriend) {
     setImage("https://i.pravatar.cc/48");
   }
 
-  return <form className="form-add-friend" onSubmit={handleSubmit} >
+  return (
+    <form className="form-add-friend" onSubmit={handleSubmit} >
     <label>🧑‍🤝‍🧑Friend name</label>
     <input type='text' value={name} 
     onChange={e=>setName(e.target.value)} />
@@ -141,6 +156,7 @@ function FormAddFriend(onAddFriend) {
 
     <Button>Add</Button>
   </form>
+  );
 }
 
 
