@@ -74,6 +74,7 @@ export default function App() {
     setSelectedFriend(null); // to close the form after splitting the bill .
   };
 
+  
   return (
     <div className="app">
       <div className="sidebar">
@@ -127,6 +128,10 @@ function Friend({ friend, onSelection, selectedFriend}) {
 
       <Button onClick={() => onSelection(friend)}>
         {isSelected ? "Close" : "Select"}
+      </Button>
+
+      <Button onClick={() => onDelete(friend.id)}>
+        Delete
       </Button>
     </li>
   );
