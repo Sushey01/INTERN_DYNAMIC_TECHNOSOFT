@@ -94,8 +94,8 @@ function handleAddFriend(friend) {
 
 
 
-function FriendsList() { //passing the Prop friends to freindslist 
-  const friends=initialFriends;
+function FriendsList({friends}) { //passing the Prop friends to freindslist 
+  
   return <ul>
     {friends.map((friend)=>(
       <Friend friend={friend} key={friend.id}/>
@@ -172,7 +172,7 @@ function Friend({friend}) {
 
 
 
-function FormAddFriend(onAddFriend){
+function FormAddFriend({onAddFriend}){
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/43")
 
@@ -183,11 +183,11 @@ function handleSubmit(e){
 
   // creating a new friend object
   
-    const id = Crypto.randomUUID();
+    const id = Date.now(); // Fallback for unique ID generation
     const newFriend ={
     id,
     name,
-    image: `${image}?=${id}`,
+    image: `${image}?u=${id}`,
     recBalance: 0,
     recommendations: [],
   }
@@ -200,7 +200,7 @@ function handleSubmit(e){
 }
 
 
-  return <form className="form-add-friend" onChange={handleSubmit}>
+  return <form className="form-add-friend" onSubmit={handleSubmit}>
     <label>😒😒Friend Name</label>
     <input type='text' 
     value={name}
