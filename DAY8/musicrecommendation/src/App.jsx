@@ -51,21 +51,42 @@ const initialFriends = [
   },
 ];
 
+
+
+
+function Button( {children, onClick}) {
+  return <button className="button" onClick={onClick}>{children}</button>
+}
+
+
+
 export default function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
+  const [formAddSong, setFormAddSong] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
+
+ 
+function handleShowAddFriend( ) {
+  setShowAddFriend((show)=> !show);
+  // setShowAddFriend(false);
+}
+
   return (
     <div className="app">
       <div className="sidebar">
         <FriendsList/>
         {showAddFriend && <FormAddFriend />}
+        <Button onClick={handleShowAddFriend}>Add Friend</Button>
         <FormAddSong />
-        <Button> Add Friend </Button>
       </div>
     </div>
   )
 }
+
+
+
+
 
 function FriendsList() {
   const friends=initialFriends;
@@ -143,17 +164,48 @@ function Friend({friend}) {
 
 }
 
-function Button( {children, onClick}) {
-  return <button className="button" onClick={onClick}>{children}</button>
-}
+
 
 function FormAddFriend(){
-  return <form className="form-add-friend">
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("https://i.pravatar.cc/43")
+
+function handleSubmit(e){
+  e.preventDefault(); // Prevent the default form submission behavior
+
+  if (!name || !image) return; // Check if name and image are provided
+
+  // creating a new friend object
+  
+    const id = Crypto.randomUUID();
+    const newFriend ={
+    id,
+    name,
+    image: `${image}?=${id}`,
+    recBalance: 0,
+    recommendations: [],
+  }
+
+  console.log(newFriend);
+  // Adding the new friend to the list of friends
+
+  setName(""); // Clear the name input
+  setImage("https://i.pravatar.cc/43");
+}
+
+
+  return <form className="form-add-friend" onChange={handleSubmit}>
     <label>😒😒Friend Name</label>
-    <input type='text' />
+    <input type='text' 
+    value={name}
+    onChange={(e)=> setName(e.target.value)}
+    />
 
     <label>📷😁Image URL</label>
-    <input type="text" />
+    <input type="text" 
+    value={image}
+    onChange={(e)=> setImage(e.target.value)}
+    />
     
 
     <Button> Add </Button>
@@ -163,7 +215,7 @@ function FormAddFriend(){
 
 
 function FormAddSong() {
-  return 
+  return (
   <form className="form-add-song">
     <h2>RECOMMEND A SONG !</h2>
     <label>🎵Song Name</label>
@@ -183,4 +235,5 @@ function FormAddSong() {
 
     <Button>Check Recommendations </Button>
   </form>
+  )
 }
