@@ -72,12 +72,18 @@ function handleShowAddFriend( ) {
   // setShowAddFriend(false);
 }
 
+
+function handleAddFriend(friend) {
+  setFriends((friends) => [...friends, friend]);
+  setShowAddFriend(false);
+}
+
   return (
     <div className="app">
       <div className="sidebar">
-        <FriendsList/>
-        {showAddFriend && <FormAddFriend />}
-        <Button onClick={handleShowAddFriend}>Add Friend</Button>
+        <FriendsList  friends={friends}/>
+        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend}/>}
+        <Button onClick={handleShowAddFriend}>{showAddFriend ? "Close" : "Add Friend"}</Button>
         <FormAddSong />
       </div>
     </div>
@@ -88,7 +94,7 @@ function handleShowAddFriend( ) {
 
 
 
-function FriendsList() {
+function FriendsList() { //passing the Prop friends to freindslist 
   const friends=initialFriends;
   return <ul>
     {friends.map((friend)=>(
@@ -166,7 +172,7 @@ function Friend({friend}) {
 
 
 
-function FormAddFriend(){
+function FormAddFriend(onAddFriend){
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/43")
 
@@ -186,7 +192,7 @@ function handleSubmit(e){
     recommendations: [],
   }
 
-  console.log(newFriend);
+  onAddFriend(newFriend);
   // Adding the new friend to the list of friends
 
   setName(""); // Clear the name input
