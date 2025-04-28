@@ -63,7 +63,6 @@ function Button( {children, onClick}) {
 export default function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
-  const [formAddSong, setFormAddSong] = useState(false);
   const [selectedFriend, setSelectedFriend] = useState(null);
 
  
@@ -78,13 +77,35 @@ function handleAddFriend(friend) {
   setShowAddFriend(false);
 }
 
+
+
+function handleSelection(friend) {
+  setSelectedFriend((cur)=> (cur?.id === friend.id ? null :friend));
+}
+
+function onAddSong(friendId, newSong, friend, selectedFriend) {
+  setFriends((prevFriends) =>
+  prevFriends.map((friend)=>
+  friend.id === selectedFriend.id
+? {...friend, recommendations: [...friend.recommendations, newSong]}
+: friend))}
+
+
   return (
     <div className="app">
       <div className="sidebar">
-        <FriendsList  friends={friends}/>
+        <FriendsList  friends={friends}
+        selectedFriend={selectedFriend}
+        onSelection={handleSelection}
+        onAddSong={onAddSong}
+        />
         {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend}/>}
+        {selectedFriend && <FormAddSong selectedFriend={selectedFriend}/>}
+       
         <Button onClick={handleShowAddFriend}>{showAddFriend ? "Close" : "Add Friend"}</Button>
-        <FormAddSong />
+        
+
+
       </div>
     </div>
   )
@@ -94,18 +115,23 @@ function handleAddFriend(friend) {
 
 
 
-function FriendsList({friends}) { //passing the Prop friends to freindslist 
+function FriendsList({friends, onSelection, selectedFriend}) { //passing the Prop friends to freindslist 
   
   return <ul>
     {friends.map((friend)=>(
-      <Friend friend={friend} key={friend.id}/>
+      <Friend friend={friend} key={friend.id} 
+      selectedFriend={selectedFriend}
+      onSelection={onSelection} />
     ))}
   </ul>
 }
 
 
-function Friend({friend}) {
-  const suggestSong = () => {
+function Friend({friend , onSelection, selectedFriend}) {
+  const isSelected = selectedFriend ?.id === friend.id;
+
+  const recommendSong = () => {
+    
     if (friend.recommendations && friend.recommendations.length > 0) {
       const randomIndex = Math.floor(Math.random() * friend.recommendations.length);
       alert(`Suggested song: "${friend.recommendations[randomIndex].title}" by ${friend.recommendations[randomIndex].artist}`);
@@ -141,8 +167,8 @@ function Friend({friend}) {
     //   )}
   
   return (
-    <li>
-      <img src={friend.image} alt={friend.name}></img>
+      <li>
+        <img src={friend.image} alt={friend.name}></img>
       <h3>{friend.name}</h3>
 
       {friend.recBalance < 0 && (
@@ -163,16 +189,18 @@ function Friend({friend}) {
         </p>
       )}
 
-      <Button onClick={suggestSong}>Suggest Song</Button>
-      <Button>Select</Button>
+      <Button onClick={recommendSong}>Recommendations</Button>
+      {/* <Button onClick={suggestedBy}>Suggestions</Button> */}
+      
+
+      <Button onClick={()=> onSelection(friend)}> {isSelected ? "Close" : "Select"} </Button>
     </li>
   );
 
 }
 
 
-
-function FormAddFriend({onAddFriend}){
+function FormAddFriend({friend, onAddFriend}){
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/43")
 
@@ -183,7 +211,7 @@ function handleSubmit(e){
 
   // creating a new friend object
   
-    const id = Date.now(); // Fallback for unique ID generation
+    const id = crypto.randomUUID();
     const newFriend ={
     id,
     name,
@@ -198,6 +226,8 @@ function handleSubmit(e){
   setName(""); // Clear the name input
   setImage("https://i.pravatar.cc/43");
 }
+
+
 
 
   return <form className="form-add-friend" onSubmit={handleSubmit}>
@@ -220,26 +250,75 @@ function handleSubmit(e){
 
 
 
-function FormAddSong() {
+function FormAddSong({selectedFriend, setFriends, onAddSong, friend}) {
+  const [songTitle, setSongTitle] = useState("");
+  const [artistName, setArtistName] = useState("");
+  const [suggestedBy, setSuggestedBy] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    // Validation: Ensure song title, artist, and who is suggesting are provided
+    if (!songTitle || ! artistName || !suggestedBy) return;
+
+    // Create a new song object
+    const newSong = {
+      id:crypto.randomUUID(),
+      title: songTitle,
+      artist: artistName,
+      suggestedBy,
+    }
+
+
+    onAddSong(newSong); // Call the onAddSong function to add the new song
+
+    //Update the recommendations list of the selected friend
+
+    setFriends(prevFriends => prevFriends.map(friend =>  friend.id === selectedFriend.id ? {...friend, recommendations: [...friend.recommendations, newSong]}: friend))
+
+    //reset form fields after submission
+    setSongTitle("");
+    setArtistName("");
+    setSuggestedBy("");
+  }
+
+
+  function handleClick(){
+    console.log("Selected friend:", selectedFriend)
+  }
+
+  
+
   return (
-  <form className="form-add-song">
-    <h2>RECOMMEND A SONG !</h2>
+  <form className="form-add-song" onSubmit={(e)=> handleSubmit(e)}>
+    <h2>SUGGEST A SONG TO {selectedFriend.name}!</h2>
     <label>🎵Song Name</label>
-    <input type="text" />
+    <input type="text" 
+    value={songTitle}
+    onChange={(e)=> setSongTitle(e.target.value)}
+    />
 
     <label>🎤Artist Name</label>
-    <input type="text" />
+    <input type="text" 
+    value={artistName}
+    onChange={(e)=> setArtistName(e.target.value)}
+    />
 
 
-    <label>💿Who is recommending the song</label>
-    <select>
+    <label>💿Who is suggesting the song</label>
+    <select
+      value={suggestedBy}
+      onChange={(e)=> setSuggestedBy(e.target.value)}
+    >
       <option value="user1">Kushal</option>
       <option value="user2"> Sandip </option>
       <option value="user3">Susan</option>
       <option value="user4">Ashish</option>
     </select>
 
-    <Button>Check Recommendations </Button>
+
+    
+      <Button type="submit" onClick={handleClick}>SUBMIT</Button>
   </form>
-  )
+  );
 }

@@ -85,3 +85,112 @@ body{
 .sidebar > .button { 
     float: right;
 }
+
+.green{
+    color: #66a80f;
+    font-weight: 500;
+}
+
+.red{
+    color:red;
+    font-weight: 500;
+}
+
+.sidebar > .button:hover {
+    background-color: var(--color-medium);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.form-add-friend {
+    display: flex;
+    grid-template-columns: 1fr 1 fr;
+    margin-bottom: 1.6rem;
+    padding: 1.2rem;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+form {
+    display: grid;
+    font-size: 1.2rem;
+    gap: 1rem;
+    border-radius: 7px;
+    background-color: var(--color-lightest);
+}
+
+
+label {
+    font-size: 1.2rem;;
+    font-weight: 500;
+}
+
+label::first-letter {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+input, select {
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.5rem;
+}
+
+
+
+input:focus,
+select:focus {
+    outline: none;
+    border:1px solid var(--color-dark);
+}
+
+
+form .button {
+    background-color: var(--color-light);
+    border-radius: 7px;
+    font-weight: 500;
+    padding: 0.5rem 1 rem;
+    font-size: 1.2rem;
+}
+
+
+form .button:hover {
+    cursor: pointer;
+    background-color: var(--color-medium);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-add-song {
+    grid-template-columns: 1fr 12rem;
+    padding: 3rem 4rem;
+    margin-left: 50px;
+}
+
+form h2 {
+    grid-column: 1/-1;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+
+@media (max-width: 768px) {
+    .app {
+        display:flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .app .sidebar {
+    .app form {
+        width: 100%;
+    }
+
+    .form-add-song {
+        padding: 2rem;
+    }
+    }
+    
+}
