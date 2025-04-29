@@ -64,6 +64,7 @@ export default function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
   const [selectedFriend, setSelectedFriend] = useState(null);
+  const [showAddSong, setShowAddSong] = useState(false);
 
  
 function handleShowAddFriend( ) {
@@ -83,7 +84,7 @@ function handleSelection(friend) {
   setSelectedFriend((cur)=> (cur?.id === friend.id ? null :friend));
 }
 
-function onAddSong(friendId, newSong, friend, selectedFriend) {
+function onAddSong(newSong) {
   setFriends((prevFriends) =>
   prevFriends.map((friend)=>
   friend.id === selectedFriend.id
@@ -100,7 +101,8 @@ function onAddSong(friendId, newSong, friend, selectedFriend) {
         onAddSong={onAddSong}
         />
         {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend}/>}
-        {selectedFriend && <FormAddSong selectedFriend={selectedFriend}/>}
+        {selectedFriend && <FormAddSong selectedFriend={selectedFriend} onAddSong={onAddSong} friends={friends} />}
+
        
         <Button onClick={handleShowAddFriend}>{showAddFriend ? "Close" : "Add Friend"}</Button>
         
@@ -134,7 +136,7 @@ function Friend({friend , onSelection, selectedFriend}) {
     
     if (friend.recommendations && friend.recommendations.length > 0) {
       const randomIndex = Math.floor(Math.random() * friend.recommendations.length);
-      alert(`Suggested song: "${friend.recommendations[randomIndex].title}" by ${friend.recommendations[randomIndex].artist}`);
+      alert(`Suggested Song by ${suggestedBy.friend}: "${friend.recommendations[randomIndex].title}" by ${friend.recommendations[randomIndex].artist }`);
     } else {
       alert(`${friend.name} has no song recommendations.`);
     }
@@ -220,6 +222,9 @@ function handleSubmit(e){
     recommendations: [],
   }
 
+
+  
+
   onAddFriend(newFriend);
   // Adding the new friend to the list of friends
 
@@ -249,76 +254,64 @@ function handleSubmit(e){
 }
 
 
-
-function FormAddSong({selectedFriend, setFriends, onAddSong, friend}) {
+function FormAddSong({ selectedFriend, onAddSong, friends }) {
   const [songTitle, setSongTitle] = useState("");
   const [artistName, setArtistName] = useState("");
   const [suggestedBy, setSuggestedBy] = useState("");
 
-  function handleSubmit(e) {
+  function handleClick(e) {
     e.preventDefault();
+    if (!songTitle || !artistName || !suggestedBy) return;
 
-    // Validation: Ensure song title, artist, and who is suggesting are provided
-    if (!songTitle || ! artistName || !suggestedBy) return;
-
-    // Create a new song object
     const newSong = {
-      id:crypto.randomUUID(),
+      id: crypto.randomUUID(),
       title: songTitle,
       artist: artistName,
-      suggestedBy,
-    }
+      suggestedBy: suggestedBy.name,
+    };
 
+    onAddSong(newSong);
 
-    onAddSong(newSong); // Call the onAddSong function to add the new song
-
-    //Update the recommendations list of the selected friend
-
-    setFriends(prevFriends => prevFriends.map(friend =>  friend.id === selectedFriend.id ? {...friend, recommendations: [...friend.recommendations, newSong]}: friend))
-
-    //reset form fields after submission
     setSongTitle("");
     setArtistName("");
     setSuggestedBy("");
   }
 
-
-  function handleClick(){
-    console.log("Selected friend:", selectedFriend)
-  }
-
-  
-
   return (
-  <form className="form-add-song" onSubmit={(e)=> handleSubmit(e)}>
-    <h2>SUGGEST A SONG TO {selectedFriend.name}!</h2>
-    <label>🎵Song Name</label>
-    <input type="text" 
-    value={songTitle}
-    onChange={(e)=> setSongTitle(e.target.value)}
-    />
+    <form className="form-add-song" onSubmit={handleClick}>
+      <h2>SUGGEST A SONG TO {selectedFriend.name}!</h2>
 
-    <label>🎤Artist Name</label>
-    <input type="text" 
-    value={artistName}
-    onChange={(e)=> setArtistName(e.target.value)}
-    />
+      <label>🎵 Song Name</label>
+      <input
+        type="text"
+        value={songTitle}
+        onChange={(e) => setSongTitle(e.target.value)}
+      />
 
+      <label>🎤 Artist Name</label>
+      <input
+        type="text"
+        value={artistName}
+        onChange={(e) => setArtistName(e.target.value)}
+      />
 
-    <label>💿Who is suggesting the song</label>
-    <select
-      value={suggestedBy}
-      onChange={(e)=> setSuggestedBy(e.target.value)}
-    >
-      <option value="user1">Kushal</option>
-      <option value="user2"> Sandip </option>
-      <option value="user3">Susan</option>
-      <option value="user4">Ashish</option>
-    </select>
+      <label>💿 Who is suggesting the song</label>
+      <select
+        value={suggestedBy}
+        onChange={(e) => setSuggestedBy(e.target.value)}
+      >
+        <option value="" disabled>Select a friend</option>
 
+        {friends
+          .filter((friend) => friend.id !== selectedFriend.id)
+          .map((friend) => (
+            <option key={friend.id} value={friend.name}>
+              {friend.name}
+            </option>
+          ))}
+      </select>
 
-    
-      <Button type="submit" onClick={handleClick}>SUBMIT</Button>
-  </form>
+      <Button >SUBMIT</Button>
+    </form>
   );
 }
