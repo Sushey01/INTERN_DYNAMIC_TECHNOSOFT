@@ -17,6 +17,23 @@ body{
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
 
+
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: lightgrey;
+}
+
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus{
+  background-color: aliceblue;
+}
+
+
 .span-two{
   grid-column: span 2;
 }
@@ -45,4 +62,6 @@ body{
   color: white;
   font-size: 2.5rem;
 }
+
+
 
