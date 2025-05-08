@@ -1,10 +1,11 @@
+// CREATED TWO CUSTOM COMPONENTS FOR BUTTON TO ENHANCE THE BUTTON FUNCTIONALITY CUZ THE BUTTONS SHARE THE SAME LOGIC
 import { useReducer } from "react"
 import OperationButton from "./OperationButton"
 import DigitButton from "./DigitButton";
 
 
 
-
+// ACTIONS CONSTANTS OR OBJECTS TO DEFINE POSSIBLE DISPATCH IN THE LOGIC & KEEPS action-types ORGANIZED
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
   CHOOSE_OPERATION:'choose-operation',
@@ -13,6 +14,8 @@ export const ACTIONS = {
   EVALUATE:'evaluate'
 }
 
+
+// CONTROLS THE APP STATE UPDATES ON USER ACTIONS: TYPING, DELETING & EVALUATING
 function reducer(state, {type, payload}) {
   switch(type) {
     case ACTIONS.ADD_DIGIT:
@@ -91,8 +94,9 @@ function reducer(state, {type, payload}) {
 
 }
 
-
+// HANDLING THE ACTUAL MATH CALCULATIONS & OPERATIONS LIKE '+' '-' AND SHOWING THE DISPLAY
 function evaluate({ currentOperand, previousOperand, operation}) {
+  
   const prev = parseFloat(previousOperand)
   const current = parseFloat(currentOperand)
   if (isNaN(prev) || isNaN(current)) return ""
@@ -116,7 +120,7 @@ function evaluate({ currentOperand, previousOperand, operation}) {
   return computation.toString();
 }
 
-
+// FORMATTING INTO US-ENG USING NUMBERFORMAT AND WITHOUT DECIMAL NUMBERS.
 const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
   maximumFractionDigits: 0,
 });
@@ -132,7 +136,7 @@ function formatOperand(operand){
 }
 
 
-
+// useReducer track the state of the calculator and dispatch() tells reducer to take actions
 function App() {
   const [{currentOperand, previousOperand, operation}, dispatch] = useReducer(reducer, {
   });
