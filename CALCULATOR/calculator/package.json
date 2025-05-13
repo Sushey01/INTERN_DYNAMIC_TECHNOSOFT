@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Sushey01.github.io/INTERN_DYNAMIC_TECHNOSOFT",
+  "homepage": ".",
   "name": "calculator",
   "version": "0.1.0",
   "private": true,
@@ -36,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
   }
 }
