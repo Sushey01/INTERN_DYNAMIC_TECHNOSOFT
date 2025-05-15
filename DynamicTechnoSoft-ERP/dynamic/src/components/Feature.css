@@ -100,13 +100,14 @@ section{
 
 
 .feature-button button{
-    border: 1px solid;
+    border: 1px solid #00A6E0;
     padding: 15px;
     width: 200px;
     font-size: 16px; 
     background-color: #00A6E0;
     color: #F4F4F4;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 
