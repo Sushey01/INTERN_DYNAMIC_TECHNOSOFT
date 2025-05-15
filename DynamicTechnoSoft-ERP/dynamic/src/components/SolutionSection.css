@@ -42,8 +42,8 @@ section{
 .ecommerce-contents{
     width: 350px;
     align-self: center;
-    border: 1px solid;
-    padding: 25px;
+    border: 1px solid white;
+    padding: 20px;
 }
 
 
@@ -52,8 +52,8 @@ section{
 
 .manufacturing{
     width: 350px;
-    border: 1px solid;
-    padding: 25px;
+    border: 1px solid white;
+    padding: 20px;
 }
 
 
@@ -61,8 +61,8 @@ section{
 
 .health-care{
     width: 350px;
-    border: 1px solid;
-    padding: 25px;
+    border: 1px solid white;
+    padding: 20px;
 }
 
 .scroll-page{
