@@ -1,0 +1,267 @@
+body{
+    overflow-x: hidden;
+}
+
+
+    .about-pivotal{
+        display: flex;
+    }
+
+    .all-about-pivotal{
+        margin-top: 20px;
+        padding-right: 70px;
+        border: 1px solid white;
+        height: 214px;
+        font-weight: 500;
+        padding: 40px;
+        padding-right: 10px;
+    }
+
+
+    .all-about-pivotal p{
+        font-size: 19.5px;
+        width:645px;
+    }
+
+
+
+    .about-pivotal span{
+        margin-left: 10px;
+    }
+
+
+    .display-showcase{
+        position: relative;
+        padding: 45px;
+        /* width: 40%; */
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+
+
+
+    .five-showcases{
+        display: grid;
+        /* justify-items: end; */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 500px;
+    }
+
+
+    .first-showcase{
+        border: 1px solid white;
+        max-width: 200px;
+        height: 150px;
+        border-radius: 5px;
+        align-content: center;
+        background-color: #7EB90F33;
+        z-index: 994;
+        justify-items: center;
+        text-align: center;
+    }
+
+
+
+
+    .first-showcase h4{
+        width: 150px;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .second-showcase{
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: #00A6E033;
+        z-index: 995;
+        justify-items: center;
+        width: 200px;
+        height: 150px;
+    }
+
+
+    .second-showcase img{
+    margin-top: 15px;
+    }
+
+    .second-showcase h4{
+        width: 100px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .third-showcase{
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: #00A6E033;
+        z-index: 996;
+        justify-items: center;
+        width: 200px;
+        height: 150px;
+
+    }
+
+
+    .third-showcase img{
+        margin-top: 10px;
+    }
+
+
+
+    .third-showcase h4{
+        text-align: center;
+        width: 100px;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+
+    .fourth-showcase{
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: #7EB90F33;
+            z-index: 997;
+        justify-items: center;
+        width: 200px;
+        height: 150px;
+    }
+
+    .fourth-showcase img{
+        margin-top: 15px;
+    }
+
+
+    .fourth-showcase h4{
+        width: 100px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 19px;
+        margin-top: 10px;
+    }
+
+
+    .fifth-showcase{
+        position: absolute;
+        border: 1px solid white;
+        background-color: white;
+        z-index: 999;
+        transform: translate(-50%, -50%);
+        top: 48%;
+        left: 47%;
+        height: 130px;
+        width: 150px;
+        border-radius: 5px;
+        justify-items: center;
+    }
+
+    .fifth-showcase img{
+        margin-top: 20px;
+    }
+
+    .fifth-showcase h4{
+        width: 100px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+
+
+    .total-company-network{
+        display: flex;
+        flex-direction: column;
+        /* position: relative; */
+        align-items: center;
+        gap: 10px;
+        background-color: white;
+    }
+
+    .total-customers .total-count{
+        font-size: 18px;
+        font-weight: 500;
+        padding-left: 50px;
+        
+    }
+
+
+    .company-images{
+        width: 80%;
+        border: 1px solid white;
+        display: flex;
+        justify-content: space-around;
+        /* padding: 15px; */
+        background-color: white;
+        gap: 15px;
+        padding-left: 60px;
+
+    }
+
+
+    .company4{
+        align-self: center;
+    }
+
+    .company5{
+        align-self: center;
+    }
+
+    .company6{
+        align-self: center;
+    }
+
+    .company7{
+        align-self: center;
+    }
+
+
+
+
+    .left-arrow{
+        align-self: center;
+    }
+
+    .right-arrow{
+        align-self: center;
+    }
+
+
+
+    @media(max-width: 645px){
+        .about-pivotal{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .all-about-pivotal{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .five-showcases{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+
+       .company-images{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+       }
+
+
+
+    }

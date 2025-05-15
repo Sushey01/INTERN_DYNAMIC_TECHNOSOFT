@@ -1,0 +1,49 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid grey;
+}
+
+
+
+
+
+
+
+.logo-image img{
+    padding-left: 80px;
+}
+
+
+.nav-items .four-navs {
+    display: flex;
+    color: black;
+    background-color: #FFFFFF;
+    gap: 25px;
+    padding-right: 90px;
+}
+
+.four-navs li{
+    list-style: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
