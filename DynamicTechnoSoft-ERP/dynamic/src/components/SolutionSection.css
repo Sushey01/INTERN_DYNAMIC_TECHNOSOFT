@@ -1,0 +1,79 @@
+section{
+    background-color: white;
+}
+
+
+.solution-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-title{
+    padding: 30px;
+}
+
+.solution-title h2{
+    font-size: 30px;
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+
+.solution-title h3{
+    width: 650px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #656565;
+    margin-left: 50px;
+}
+
+
+.major-locations{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 80px;
+}
+
+
+
+
+
+.ecommerce-contents{
+    width: 350px;
+    align-self: center;
+    border: 1px solid;
+    padding: 25px;
+}
+
+
+
+
+
+.manufacturing{
+    width: 350px;
+    border: 1px solid;
+    padding: 25px;
+}
+
+
+
+
+.health-care{
+    width: 350px;
+    border: 1px solid;
+    padding: 25px;
+}
+
+.scroll-page{
+    align-self: center;
+}
+.empty-button {
+    border: 1px solid #7EB90F;
+    padding: 5px;
+    color: #7EB90F;
+    border-radius: 5px;
+    width: 50px;
+    height: 10px;
+    background-color: #7EB90F;
+}

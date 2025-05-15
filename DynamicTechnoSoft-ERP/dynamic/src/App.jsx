@@ -10,8 +10,8 @@ export default function App () {
     <div>
       <Navbar/>
       <AboutSection/>
-      {/* <SolutionSection/> */}
       <Features/>
+      <SolutionSection/>
     </div>
   )
 }
