@@ -21,8 +21,9 @@ const SolutionSection = () => {
             <div className="ecommerce-contents">
               <img src={Solution1}></img>
               <span>Retail & eCommerce</span>
-
-              <p>
+            </div>
+            <div className="ecommerce-paragraph">
+            
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -38,11 +39,9 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                POS & Billing – Faster transactions with barcode & mobile POS
-                systems.
-              </p>
+                <p>  POS & Billing – Faster transactions with barcode & mobile POS
+                systems.</p>
 
-              <p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -58,10 +57,9 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Customer Loyalty & Discounts – Increase repeat customers with
-                AI-based engagement.
-              </p>
-              <p>
+                <p>Customer Loyalty & Discounts – Increase repeat customers with
+                AI-based engagement.</p>
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -77,15 +75,18 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Stock Replenishment Automation – Never run out of best-sellers.
-              </p>
+                <p>Stock Replenishment Automation – Never run out of best-sellers.</p>
+
             </div>
+              
           </div>
           <div className="manufacturing">
             <div className="manufacture-image">
               <img src={Solution2}></img>
               <span>Manufacturing & Production</span>
-              <p>
+              </div>
+              <div className="manufacture-paragraph">
+          
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -101,9 +102,9 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Smart Scheduling & Workflows – Reduce production delays.
-              </p>
-              <p>
+                <p>Smart Scheduling & Workflows – Reduce production delays.</p>
+            
+             
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -119,9 +120,9 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Real-Time Quality Checks – Improve product consistency.
-              </p>
-              <p>
+               <p> Real-Time Quality Checks – Improve product consistency.</p>
+          
+             
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -137,16 +138,18 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                End-to-End Supply Chain – Track raw materials, WIP, and final
-                products.
-              </p>
-            </div>
+              <p>  End-to-End Supply Chain – Track raw materials, WIP, and final
+                products.</p>
+          
+              </div>
           </div>
           <div className="health-care">
             <div className="healthcare-image">
               <img src={Solution3}></img>
               <span>Healthcare & Pharmacy</span>
-              <p>
+            </div>
+            <div className="healthcare-paragraph">
+              
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -162,9 +165,8 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                HIPAA-Compliant Patient Management.
-              </p>
-              <p>
+               <p>HIPAA-Compliant Patient Management.</p>
+              
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -180,9 +182,8 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Medicine Inventory & Expiry Alerts.
-              </p>
-              <p>
+      
+              <p>Medicine Inventory & Expiry Alerts.</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -198,19 +199,19 @@ const SolutionSection = () => {
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Billing & Insurance Processing.
-              </p>
+              <p> Billing & Insurance Processing.</p>
             </div>
           </div>
+  
         </div>
 
-
-
-        <div className="scroll-page">
-            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1" color="#7EB90F"/></svg> */}
+      <div className="scroll-page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" color="#00A6E0" viewBox="0 0 24 24" fill="none" stroke="currentColor"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1" /></svg>
             <button className="empty-button"></button>
-            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#7EB90F" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg> */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" color="#00A6E0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg>
         </div>
+
+
       </div>
     </section>
   );

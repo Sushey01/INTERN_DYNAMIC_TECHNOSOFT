@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import AboutSection from './components/AboutSection'
 import Features from './components/Features'
 import SolutionSection from './components/SolutionSection'
+import WhyChoose from './components/WhyChoose'
 
 
 export default function App () {
@@ -12,6 +13,7 @@ export default function App () {
       <AboutSection/>
       <Features/>
       <SolutionSection/>
+      <WhyChoose/>
     </div>
   )
 }

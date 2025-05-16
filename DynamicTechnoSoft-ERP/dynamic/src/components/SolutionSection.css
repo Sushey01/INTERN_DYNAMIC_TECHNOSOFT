@@ -6,15 +6,18 @@ section{
 .solution-page{
     display: flex;
     flex-direction: column;
+    background-color: #FFFFFF;
 }
 
 .solution-title{
-    padding: 30px;
+    padding-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .solution-title h2{
     font-size: 30px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     font-weight: 500;
 }
 
@@ -24,7 +27,7 @@ section{
     font-size: 19px;
     font-weight: 400;
     color: #656565;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 
@@ -32,48 +35,145 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-left: 80px;
+    padding: 80px;
+    padding-bottom: 20px;
+    padding-top: 30px;
 }
 
 
 
-
+.retail-ecommerce{
+    border: 1px solid #EBEBEB;
+    padding: 40px;
+}
 
 .ecommerce-contents{
-    width: 350px;
-    align-self: center;
-    border: 1px solid white;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.ecommerce-contents span{
+    font-size: 20px;
+    font-weight: 550;
 }
 
 
+
+.ecommerce-paragraph{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+}
+
+
+.ecommerce-paragraph p{
+    font-size: 18px;
+    color: #656565;
+}
 
 
 
 .manufacturing{
-    width: 350px;
-    border: 1px solid white;
-    padding: 20px;
+    border: 1px solid #EBEBEB;
+    padding: 40px;
 }
 
+
+
+
+
+.manufacture-image{
+    display: flex;
+    align-items: center;
+    border: 1px solid #656565;
+    width: 300px;
+    border: 1px solid white;
+}
+
+.manufacture-image span{
+    font-size: 20px;
+    width: 180px;
+    font-weight: 550;
+}
+
+
+.manufacture-paragraph{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+}
+
+.manufacture-paragraph p{
+    font-size: 18px;
+    color: #656565;
+}
 
 
 
 .health-care{
-    width: 350px;
-    border: 1px solid white;
-    padding: 20px;
+    width: 300px;
+    border: 1px solid #EBEBEB;
+    padding: 40px;
 }
 
-.scroll-page{
-    align-self: center;
+
+.healthcare-image{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+
+.healthcare-image span{
+    font-size: 20px;
+    width: 120px;
+    font-weight: 550;
+}
+
+
+.healthcare-paragraph{
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 10% 95%;
+    align-items: center;
+}
+
+
+.healthcare-paragraph p{
+    font-size: 17px;
+    color: #656565;
+}
+
+
+.scroll-page{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+
 .empty-button {
     border: 1px solid #7EB90F;
-    padding: 5px;
+    padding: 3px;
     color: #7EB90F;
     border-radius: 5px;
-    width: 50px;
-    height: 10px;
+    width: 30px;
     background-color: #7EB90F;
+}
+
+
+
+@media(max-width:645px){
+    .ecommerce-contents img{
+        display: flex;
+        font-size: 15px;
+    }
+
+    .major-locations{
+        display: flex;
+        flex-direction: column;
+    }
 }
