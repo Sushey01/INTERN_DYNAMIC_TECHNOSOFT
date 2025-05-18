@@ -18,7 +18,7 @@ const AboutSection = () => {
     <>
     <section
       style={{
-        height: "75vh",
+        height: "90vh",
         border: "1px solid white",
         background: "white",
         display: "flex",
@@ -32,13 +32,13 @@ const AboutSection = () => {
           <h1
             style={{
               fontSize: "25px",
-              width:"50px",
-              height:"15px"
+              width:"100px",
+              height:"40px"
             }}
           >
             About
           </h1>
-          <h2 style={{ color: "#00A6E0", fontSize: "35px", height:"20px", width:"50px" }}>
+          <h2 style={{ color: "#00A6E0", fontSize: "35px", height:"40px", width:"50px" }}>
             Pivotal
             <span
               style={{
