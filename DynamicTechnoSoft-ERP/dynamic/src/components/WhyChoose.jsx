@@ -9,8 +9,8 @@ import Choose5 from "../assets/images/choose5.png";
 
 const WhyChoose = () => {
   return (
-    <section>
-      <div className="why-choose-page">
+    <section className="section3">
+      <>
         <div className="why-choose-title">
           <h1> Why Choose</h1>
           <h1
@@ -31,7 +31,7 @@ const WhyChoose = () => {
           </h1>
           <h1>?</h1>
         </div>
-      </div>
+      </>
 
       <div className="choose-pivotal-main">
         {/* <div className="choose-pivotal-div"> */}

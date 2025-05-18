@@ -1,4 +1,4 @@
-section{
+.section2{
     background-color: white;
 }
 
@@ -175,5 +175,6 @@ section{
     .major-locations{
         display: flex;
         flex-direction: column;
+        /* padding: 80px; */
     }
 }

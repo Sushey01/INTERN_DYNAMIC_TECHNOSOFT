@@ -9,7 +9,7 @@ import Feature6 from '../assets/images/feature6.png'
 
 const Features = () => {
   return (
-    <section>
+    <section className='section1'>
         <div className="modules-features">
             <div className='feature-heading'><h2>Core ERP Modules & Features </h2>
             {/* <h2>Modules </h2>

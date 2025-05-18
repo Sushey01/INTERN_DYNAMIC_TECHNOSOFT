@@ -1,18 +1,12 @@
 
-section{
+.section3{
     background-color: #F4F4F4;
 }
-
-
-.why-choose-page{
-    display: flex;
-}
-
 
 .why-choose-title{
     font-size: 20px;
       display: flex;
-      flex-direction: row;
+      /* flex-direction: row; */
       gap: 7px;
       padding: 80px;
       padding-bottom: 0px;

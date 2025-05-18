@@ -6,7 +6,7 @@ import Solution3 from "../assets/images/solution3.png";
 
 const SolutionSection = () => {
   return (
-    <section>
+    <section className="section2">
       <div className="solution-page">
         <div className="solution-title">
           <h2>Industry-Specific Solutions</h2>

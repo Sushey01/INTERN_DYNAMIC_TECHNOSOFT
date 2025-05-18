@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection'
 import Features from './components/Features'
 import SolutionSection from './components/SolutionSection'
 import WhyChoose from './components/WhyChoose'
+import Contact from './components/Contact'
 
 
 export default function App () {
@@ -14,6 +15,7 @@ export default function App () {
       <Features/>
       <SolutionSection/>
       <WhyChoose/>
+      <Contact/>
     </div>
   )
 }

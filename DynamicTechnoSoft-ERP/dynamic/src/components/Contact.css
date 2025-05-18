@@ -1,0 +1,164 @@
+
+.section4{
+    background-color: white;
+}
+
+
+.main-contact{
+    display: flex;
+    padding: 80px;
+    gap: 20px;
+}
+
+
+
+.contact-content p{
+    font-size: 19.5px;
+    font-weight: 300;
+    
+}
+
+
+.contact-page{
+    display: grid;
+    width: 60%;
+}
+
+
+.second-title h1{
+    margin-top: 0px;
+}
+
+.contact-us{
+    margin-bottom: 0px;
+    font-size: 28px;
+}
+
+
+.second-title{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contact-method{
+    display: flex;
+    gap: 20px;
+}
+
+
+.call-us{
+    width: 200px;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    background-color: #F4F4F4;
+    padding: 15px;
+    justify-items: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.call-us h5{
+    font-size: 15px;
+    font-weight: 550;
+    margin-bottom: 5px;
+    margin-top: 18px;
+}
+
+
+.call-us .local-number{
+    color: #8D8D8D;
+}
+
+.chat-team{
+    width: 200px;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #F4F4F4;
+    justify-items: center;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.chat-team h5{
+    width: 125px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+
+
+.product-demo{
+    width: 200px;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    padding: 15px;
+    justify-items: center;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    background-color: #F4F4F4;
+    padding-right: 0px;
+}
+
+
+
+.product-demo h5{
+    text-align: center;
+    font-size: 15px;
+    width: 125px;
+    margin-bottom: 10px;
+    margin-top: 18px;
+
+}
+
+
+
+button{
+    border: 1px solid;
+    padding: 15px;
+    background-color: #7EB90F;
+    border-radius: 8px;
+    width: 150px;
+    color: white;;
+}
+
+
+.contact-img-section{
+    width: 40%;
+    padding-left: 50px;
+}
+
+
+
+@media(max-width=645px) {
+
+
+    .main-contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-method{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media(max-width=1300px){
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
