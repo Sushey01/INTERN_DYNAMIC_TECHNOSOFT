@@ -1,7 +1,4 @@
 
-/* .customer-section{
-    padding-top: 0px;
-} */
 
 
 
@@ -10,7 +7,7 @@
     gap: 10px;
     justify-content: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
 }
 
 
@@ -22,43 +19,104 @@
 
 
 .customer1{
-    border: 1px solid;
-    width: 400px;
+    display: flex;
+    border: 1px solid #00A6E033;
+    border-radius: 10px;
+    width: 405px;
+    position: relative;
 }
 
 
 
 .customer1-image{
+    position: absolute;
     display: flex;
     /* flex-direction: column; */
     align-items: center;
+    z-index: 991;
+    transform: translate(-0%, -50%);
+    top: 0%;
+    left: 0%;
+}
+
+
+.customer1-info{
+    border: 1px solid #005876;
+    border-radius: 5px;
+    background-color: #005876;
+    padding: 10px;
 }
 
 
 
 .customer1-container{
-    border: 1px solid;
-    background-color: blue;
-    
+    display: flex;
+    border: 1px solid #00A6E033;
+    background-color: #00A6E033;
+    border-radius: 5px;
+    /* z-index: 990; */
+}
+
+
+.customer1-container h3{
+   margin-top: 60px;
+   font-size: 16.5px;
+   width: 390px;
+   color: #282828;
+   font-weight: 400;
+   /* border-radius: 5px; */
+z-index: 989;
+transform: translateX(-20%);
 }
 
 .customer2{
     width: 600px;
-    border: 1px solid ;
-    background-color: green;
+    background-color: #00A6E0;
+    position: relative;
+    border-radius: 5px;
 }
 
 
 .customer2-image{
     display: flex;
     align-items: center;
+    z-index: 995;
+    transform: translate(20%, -50%);
+    left: 0%;
+    top: 50%;
 }
+
+
+.customer2-container h3{
+   /* margin-top: 60px; */
+   font-size: 16.5px;
+   
+   width: 390px;
+   color: #282828;
+   font-weight: 400;
+   /* border-radius: 5px; */
+/* z-index: 989; */
+transform: translate(20%, -40%);
+}
+
+.customer2-info{
+    border: 1px solid #028CBC;
+    background-color: #028CBC;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
 
 
 .customer3{
     width: 400px;
-    background-color: purple;
+    border-radius: 5px;
+    background-color: #00A6E033;
     border: 1px solid;
+    position: relative;
+    z-index: 998;
 }
 
 
@@ -66,11 +124,39 @@
 .customer3-image{
     display: flex;
     align-items: center;
+    z-index: 999;
+    transform: translate(40%, -50%);
+    left: 50%;
+    top: 50%;
 }
 
 
+.customer3-container h3{
+   margin-top: 30px;
+   font-size: 16.5px;
+   width: 390px;
+   color: #282828;
+   font-weight: 400;
+transform: translate(25%, -50%);
+}
+
+.customer3-info{
+    border: 1px solid #00A6E033;
+    background-color: #005876;
+    padding: 10px;
+}
+
+.slide-button{
+    display: flex;
+    justify-self: center;
+    padding: 20px;
+}
 
 
 .slider{
+    padding: 5px;
+    width: 40px;
+    height: 10px;
     align-self: center;
+
 }
