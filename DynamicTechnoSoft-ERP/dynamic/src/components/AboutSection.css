@@ -1,14 +1,26 @@
-body {
-  overflow-x: hidden;
-}
+
 
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+/* section{
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
+    padding: 40px;
+    padding-top: 20px;
+    height: 90vh;
+} */
+
 .about-pivotal {
   display: flex;
+  padding: 40px;
 }
 
 .all-about-pivotal {
@@ -21,12 +33,29 @@ body {
   padding-right: 5px;
 }
 
+
+.all-about-pivotal h1{
+    font-size: 25px;
+    width: 100px;
+    height: 40px;
+}
+
 .all-about-pivotal p {
   font-size: 19px;
   /* width: 100%; */
   padding-top: 20px;
   color: #656565;
 }
+
+
+
+.all-about-pivotal h2{
+    color: #00A6E0;
+    font-size: 35px;
+    height: 40px;
+    width: 50px;
+}
+
 
 .about-pivotal span {
   margin-left: 10px;
@@ -145,7 +174,7 @@ body {
   background-color: white;
   z-index: 999;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 58%;
   left: 48%;
   height: 130px;
   width: 150px;
@@ -175,11 +204,12 @@ body {
   padding-bottom: 50px;
 }
 
-.total-customers .total-count {
+.total-count {
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 20px;
   /* padding-left: 30px; */
+  padding-top: 10px;
 }
 
 .company-images {
@@ -218,9 +248,33 @@ body {
 }
 
 @media (max-width: 645px) {
+
   .about-pivotal {
     display: flex;
     flex-direction: column;
+  }
+
+
+.first-showcase{
+  width: 50px;
+}
+
+  .first-showcase h4{
+    font-size: 15px;
+  }
+
+
+  .second-showcase h4{
+    font-size: 15px;
+  }
+
+
+  .third-showcase h4{
+    font-size: 15px;
+  }
+
+  .fourth-showcase h4{
+    font-size: 15px;
   }
 
   .all-about-pivotal {
@@ -228,14 +282,60 @@ body {
     flex-direction: column;
   }
 
-  .five-showcases {
-    display: flex;
-    flex-direction: column;
+
+  .all-about-pivotal p{
+    font-size: 18px;
+    width: 650px;
+    text-align: justify;
   }
+
+  .all-about-pivotal h1{
+    font-size: 15px;
+  }
+
+
+  .all-about-pivotal h2{
+    font-size: 25px;
+    font-size: calc(1rem + 1vw);
+  }
+
+  .five-showcases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+   justify-items: center;
+   position: relative;
+  }
+
+  .first-showcase{
+    width: 200px;
+    height:150px;
+  }
+
+
+  .fifth-showcase{
+    /* z-index: 0; */
+    position: static;
+    transform: none;
+    /* top: 50px;
+    left: 50px; */
+    /* padding-top: 50%;
+    padding-left: 50%; */
+  }
+
+ .total-count{
+  font-size: 20px;
+  width: 600px;
+  margin-left: 20%;
+}
+
 
   .company-images {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    width: 20%;
+    padding-right: 90%;
   }
+
+  
+  
 }

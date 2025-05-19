@@ -167,14 +167,27 @@
 
 
 @media(max-width:645px){
+
+
+
     .ecommerce-contents img{
         display: flex;
         font-size: 15px;
     }
 
     .major-locations{
-        display: flex;
-        flex-direction: column;
-        /* padding: 80px; */
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       padding: 40px;
+       /* justify-items: center; */
     }
+
+
+    /* .scroll-page{
+        justify-content: center;
+    } */
+    .empty-button{
+        align-self: center;
+    }
+
 }

@@ -1,4 +1,11 @@
 
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .section3{
     background-color: #F4F4F4;
 }
@@ -198,4 +205,30 @@
     margin-top: 0px;
     width: 150px;
     color: #8B8B8B;
+}
+
+
+@media(max-width:645px){
+    .section3{
+        width: 850px;
+        height: 100vh;
+    }
+
+
+
+    .choose-pivotal-main{
+        justify-self: center;
+    }
+
+    .container-div img{
+        justify-self: center;
+    }
+
+
+    .choose-pivotal-main{
+     display: flex;
+     gap: 20px;
+     flex-direction: column;
+     /* align-items: center; */
+    }
 }

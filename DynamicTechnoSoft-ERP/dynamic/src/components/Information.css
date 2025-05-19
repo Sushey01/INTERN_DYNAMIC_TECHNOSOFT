@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.section5{
+    background-color: #F4F4F4;
+}
+
+
+.main-information{
+    padding: 100px;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+.info-heading{
+    width: 800px;
+    text-align: center;
+}
+
+.border-line{
+    width: 100px;
+    font-weight: 650;
+    justify-self: center;
+    padding-top: 0px;
+    color: #00A6E0;
+}
+
+.two-information{
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+
+.info-1{
+    display: flex;
+    border: 1px solid #F4F4F4;
+    justify-items: center;
+    border-radius: 10px;
+    width: 460px;
+    padding: 80px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.info-1 img{
+    width: 80px;
+    height: 80px;
+    align-self: center;
+}
+
+.info-1 p{
+    align-self: center;
+    width: 200px;
+}
+.info-2{
+    width: 460px;
+    border: 1px solid #F4F4F4;
+    justify-items: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+
+.info-2 img{
+    width: 150px;
+    height: 100px;
+}
+
+
+.info-2 p{
+    width: 205px;
+}
+
+
+
+.small-info{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 25px;
+    color: #1E1E1E;
+}
+
+.six-infos{
+    width: 920px;
+    display: flex;
+    padding-left: 10%;
+    gap: 20px;
+    background-color: #F4F4F4;
+}
+
+.first-three-infos{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    gap: 5px;
+}
+
+
+.second-three-infos{
+    display: grid;
+    grid-template-columns: 6% 90%;
+    gap: 5px;
+}
+
+
+
+
+
+
+@media(max-width:645px){
+
+    .section5{
+        width: 900px;
+    }
+   
+
+    .info-heading{
+        width: 500px;
+        font-size: 12px;
+    }
+
+
+    .two-information{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-1{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+    .six-infos{
+        display: flex;
+        width: 600px;
+    }
+}

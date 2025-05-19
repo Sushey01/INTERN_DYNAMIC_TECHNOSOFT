@@ -11,6 +11,7 @@ export default function Information() {
       <div className="info-heading">
         <h1> At Pivotal Technologies Pvt Ltd, we prioritize the security and compliance
         of your data.</h1>
+        <h5 className='border-line'>___</h5>
       </div>
 
       <div className="two-information">
@@ -30,6 +31,7 @@ export default function Information() {
       </div>
 
       <div className="six-infos">
+        <div className='first-three-infos'>
           <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -82,7 +84,9 @@ export default function Information() {
                 </svg>
 
                 <p>Strict privacy policies: we do not share or sell your data.</p>
+                </div>
 
+                <div className='second-three-infos'>
                   <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -137,6 +141,7 @@ export default function Information() {
                 </svg>
 
                 <p>Daily comprehensive data backups.</p>
+                </div>
       </div>
     </div>
     </section>

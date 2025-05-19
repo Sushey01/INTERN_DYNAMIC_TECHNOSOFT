@@ -16,29 +16,19 @@ import Company7 from "../assets/images/company7.png";
 const AboutSection = () => {
   return (
     <>
-    <section
-      style={{
-        height: "90vh",
-        border: "1px solid white",
-        background: "white",
-        display: "flex",
-        // justifyContent:"center",
-        // justifyContent:"space-around",
-        padding: "40px",
-      }}
-    >
+    {/* <section> */}
       <div className="about-pivotal " >
         <div className="all-about-pivotal">
           <h1
-            style={{
-              fontSize: "25px",
-              width:"100px",
-              height:"40px"
-            }}
+            // style={{
+            //   fontSize: "25px",
+            //   width:"100px",
+            //   height:"40px"
+            // }}
           >
             About
           </h1>
-          <h2 style={{ color: "#00A6E0", fontSize: "35px", height:"40px", width:"50px" }}>
+          <h2 >
             Pivotal
             <span
               style={{
@@ -86,7 +76,7 @@ const AboutSection = () => {
       </div>
 
 
-    </section>
+    {/* </section> */}
 
       <div className="total-company-network">
         <div className="total-customers">
