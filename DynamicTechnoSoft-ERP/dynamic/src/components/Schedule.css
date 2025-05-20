@@ -1,0 +1,73 @@
+.section7{
+    background-color: #F4F4F4;
+}
+
+
+.chart-container{
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.two-charts{
+    display: flex;
+}
+
+
+.first-chart{
+    border: 1px solid;
+}
+
+.blank{
+    background-color: rgba(126, 185, 15, 0.2);
+    border: 1px solid;
+    padding: 50px;
+    width: 285px;
+    height: 160px;
+}
+
+.chart{
+    width: 285px;
+    height: 160px;
+    background-color: rgba(126, 185, 15, 0.5);
+}
+
+.chart img{
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+.second-chart{
+    border: 1px solid;
+    width: 285px;
+    align-content: center;
+    
+}
+
+.second-chart img{
+    float: right;
+}
+
+
+
+.schedule-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+
+}
+
+
+.schedule-title{
+    border: 1px solid;
+    align-self: center;
+}
+
+.schedule-form{
+    display: flex;
+    flex-direction: column;
+}
+

@@ -7,6 +7,7 @@ import WhyChoose from './components/WhyChoose'
 import Contact from './components/Contact'
 import Information from './components/Information'
 import CustomerReview from './components/CustomerReview'
+import Schedule from './components/Schedule'
 
 
 export default function App () {
@@ -20,6 +21,7 @@ export default function App () {
       <Contact/>
       <Information/>
       <CustomerReview/>
+      <Schedule/>
     </div>
   )
 }

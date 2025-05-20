@@ -160,3 +160,52 @@ transform: translate(25%, -50%);
     align-self: center;
 
 }
+
+
+
+
+@media(max-width:645px){
+
+
+
+
+/* 
+    .customer-reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customer1-image{
+        position: static;
+        transform: none;
+    }
+
+    .customer1-container h3{
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+
+    .customer2-image{
+        position: static;
+        transform: none;
+    }
+
+    .customer2-container h3{
+        transform: none;
+        position: static;
+    }
+
+
+    .customer3-container h3{
+        transform: none;
+        position: static;
+    }
+
+    .customer3-image{
+        position: static;
+        transform: none;
+    } */
+}
