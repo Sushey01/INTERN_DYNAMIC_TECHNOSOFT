@@ -1,0 +1,166 @@
+.section9{
+    background-color: #0085B4;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    padding-right: 80px;
+
+    /* display: grid;
+    grid-template-columns: 20% 20% 20% 20%; */
+}
+
+.footer-logo img{
+    width: 115px;
+    height: 80px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+
+.footer-logo h3{
+    padding-top: 5px;
+    width: 440px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.company-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.our-links1{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.our-links2{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #ffffff;
+}
+
+.our-links3{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #ffffff;
+}
+
+.our-links4{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #ffffff;
+}
+
+.our-links5{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+
+.other-links{
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.policy{
+    display: flex;
+    gap: 5px;
+    color: #ffffff;
+    align-items: center;
+    color: #ffffff;
+}
+
+.terms{
+    display: flex;
+    gap: 3px;
+    color: #ffffff;
+    align-items: center;
+    color: #ffffff;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.mail1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+
+.mail2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+.call{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+}
+
+
+.last-footer{
+    display: flex;
+    background-color: #007DAA;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.one-content{
+    display: flex;
+    margin-left: 60px;
+    color: #ffffff;
+}
+
+.two-content{
+    display: flex;
+    margin-right: 60px;
+    gap: 50px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+

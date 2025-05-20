@@ -8,6 +8,8 @@ import Contact from './components/Contact'
 import Information from './components/Information'
 import CustomerReview from './components/CustomerReview'
 import Schedule from './components/Schedule'
+import Frequently from './components/Frequently'
+import Footer from './components/Footer'
 
 
 export default function App () {
@@ -20,8 +22,10 @@ export default function App () {
       <WhyChoose/>
       <Contact/>
       <Information/>
-      <CustomerReview/>
+      {/* <CustomerReview/> */}
       <Schedule/>
+      <Frequently/>
+      <Footer/>
     </div>
   )
 }

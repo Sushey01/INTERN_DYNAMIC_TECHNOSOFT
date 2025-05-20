@@ -3,8 +3,12 @@
 }
 
 
+.main-chart-container{
+    display: flex;
+    padding: 80px;
+}
+
 .chart-container{
-    padding: 40px;
     display: flex;
     gap: 30px;
 }
@@ -19,13 +23,13 @@
 }
 
 
-.first-chart{
-    border: 1px solid;
-}
+/* .first-chart{
+    border: 1px solid ;
+} */
 
 .blank{
     background-color: rgba(126, 185, 15, 0.2);
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 50px;
     width: 285px;
     height: 160px;
@@ -59,6 +63,7 @@
 
 
 .schedule-container{
+    padding-right: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -107,17 +112,17 @@
 
 .first-name{
     padding: 15px;
-    border: 1px solid;
+    border: 1px solid #8D8D8D;
     border-radius: 5px;
-    width: 288px;
+    width: 250px;
     padding-left: 25px;
 }
 
 .last-name{
     padding: 15px;
-    border: 1px solid;
+    border: 1px solid #8D8D8D;
     border-radius: 5px;
-    width: 288px;
+    width: 250px;
     padding-left: 25px;
 }
 
@@ -129,9 +134,10 @@
 }
 
 .email{
-    border: 1px solid;
+    border: 1px solid #8D8D8D;
     border-radius: 5px;
     padding: 15px;
+    width: 530px;
     padding-left: 23px;
 }
 
@@ -145,7 +151,8 @@
 .company{
     border-radius: 5px;
     padding: 15px;
-    border: 1px solid;
+     width: 530px;
+    border: 1px solid #8D8D8D;
     padding-left: 22px;
 }
 
@@ -155,12 +162,34 @@
 }
 
 .condition-message h1{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 }
 
 .send-button .schedule-button{
-    width: 606px;
+    width: 530px;
+}
+
+
+
+
+@media(max-width:645px){
+
+    .section7{
+        width: 900px;
+    }
+  
+    .main-chart-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .chart-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 

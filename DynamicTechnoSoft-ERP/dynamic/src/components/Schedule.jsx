@@ -3,6 +3,7 @@ import "./Schedule.css";
 import Schedule1 from "../assets/images/schedule1.png";
 import Schedule2 from "../assets/images/schedule2.png";
 import Schedule3 from "../assets/images/Vector.svg";
+import PlayButton from "../assets/images/play.svg"
 
 const Schedule = () => {
   const [fName, setFName] = useState("");
@@ -19,6 +20,7 @@ const Schedule = () => {
 
   return (
     <section className="section7">
+      <div className="main-chart-container">
       <div className="chart-container">
         
         <div className="two-charts">
@@ -34,7 +36,16 @@ const Schedule = () => {
           <div className="second-chart">
             <img src={Schedule2}></img>
           </div>
+
+   
         </div>
+               {/* <div className="learn-more-div">
+            <img src={PlayButton}></img>
+            <div className="learn-content">
+              <h6>Learn More</h6>
+              <p>1.45 min</p>
+            </div>
+          </div> */}
 
 
         <div className="schedule-container">
@@ -106,6 +117,7 @@ const Schedule = () => {
             
           </form>
         </div>
+      </div>
       </div>
     </section>
   );
