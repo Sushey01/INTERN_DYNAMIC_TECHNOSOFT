@@ -42,21 +42,25 @@ const Schedule = () => {
           </div>
         </div>
 
-      <div className="schedule-container">
 
-        <div className="schedule-title">
+    
+      <div className="schedule-container">
+         <div className="schedule-title">
         <h1>Schedule a demo</h1>
         </div>
-        
 
         <form className="schedule-form" onSubmit={handleSubmit}>
-            <label>First name</label>
-            <input
+            
+            <div className="first-last-name">
+                     <label>First name</label>
+            <input className="first-name"
             type="text"
             value={fName}
             placeholder="Enter your first name"
             onChange={(e)=>setFName(e.target.value)}
             />
+
+         
 
             <label>Last name</label>
             <input
@@ -65,6 +69,8 @@ const Schedule = () => {
             placeholder="Enter your last name"
             onChange={(e)=>setLName(e.target.value)}
             />
+            </div>
+       
 
 
             <label>Work email</label>

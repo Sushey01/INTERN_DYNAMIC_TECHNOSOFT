@@ -11,6 +11,9 @@
 
 .two-charts{
     display: flex;
+    width: 580px;
+    align-self: center;
+    height: 330px;
 }
 
 
@@ -28,7 +31,7 @@
 
 .chart{
     width: 285px;
-    height: 160px;
+    height: 169px;
     background-color: rgba(126, 185, 15, 0.5);
 }
 
@@ -44,7 +47,6 @@
     border: 1px solid;
     width: 285px;
     align-content: center;
-    
 }
 
 .second-chart img{
@@ -57,17 +59,29 @@
     display: flex;
     flex-direction: column;
     border: 1px solid;
-
+    gap: 20px;
 }
 
 
 .schedule-title{
-    border: 1px solid;
-    align-self: center;
+    border: 1px solid ;
+    /* align-self: center; */
+    justify-items: center;
+    color: #7EB90F;
 }
 
 .schedule-form{
     display: flex;
+    padding: 20px;
     flex-direction: column;
+    border: 1px solid;
 }
+
+
+.first-last-name{
+    gap: 20px;
+}
+
+
+
 
