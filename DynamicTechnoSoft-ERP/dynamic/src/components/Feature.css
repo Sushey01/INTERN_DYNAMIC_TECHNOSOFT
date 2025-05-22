@@ -135,7 +135,7 @@
 
     
     .section1{
-        width: 850px;
+        width: 900px;
     }
 
 
@@ -150,6 +150,7 @@
         grid-template-columns: repeat(2, 1fr);
         width: 300px;
         align-content: center;
+        padding: 20px;
     }
 
 }

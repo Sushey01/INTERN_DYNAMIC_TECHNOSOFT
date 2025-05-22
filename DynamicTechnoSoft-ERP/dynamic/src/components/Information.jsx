@@ -27,7 +27,7 @@ export default function Information() {
       </div>
 
       <div className="small-info">
-        <h4>Your data is encrypted all the way, at all times.</h4>
+        <h3>Your data is encrypted all the way, at all times.</h3>
       </div>
 
       <div className="six-infos">

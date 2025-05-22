@@ -19,13 +19,7 @@ const AboutSection = () => {
     {/* <section> */}
       <div className="about-pivotal " >
         <div className="all-about-pivotal">
-          <h1
-            // style={{
-            //   fontSize: "25px",
-            //   width:"100px",
-            //   height:"40px"
-            // }}
-          >
+          <h1>
             About
           </h1>
           <h2 >

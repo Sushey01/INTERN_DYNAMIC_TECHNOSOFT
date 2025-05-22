@@ -177,12 +177,28 @@
 
     .section7{
         width: 900px;
+        /* overflow-x: hidden; */
     }
   
     .main-chart-container{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
+
+    /* .chart-container{
+        justify-items: center;
+    } */
+
+
+    .schedule-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+
+
 
 
     .chart-container{
@@ -190,6 +206,9 @@
         flex-direction: column;
         align-items: center;
     }
+
+
+    
 }
 
 

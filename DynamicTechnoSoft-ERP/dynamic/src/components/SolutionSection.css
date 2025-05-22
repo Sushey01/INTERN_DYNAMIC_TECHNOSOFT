@@ -168,7 +168,9 @@
 
 @media(max-width:645px){
 
-
+    .section2{
+        width: 900px;
+    }
 
     .ecommerce-contents img{
         display: flex;

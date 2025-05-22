@@ -128,8 +128,8 @@
    
 
     .info-heading{
-        width: 500px;
-        font-size: 12px;
+        width: 650px;
+        /* font-size: 14px; */
     }
 
 
@@ -146,6 +146,7 @@
 
     .six-infos{
         display: flex;
-        width: 600px;
+        width: 700px;
+        padding-left: 20px;
     }
 }

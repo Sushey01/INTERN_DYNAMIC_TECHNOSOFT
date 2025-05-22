@@ -64,3 +64,16 @@
     grid-template-columns: 90% 10%;
     border-bottom: 1px solid #00A6E033;
 }
+
+
+@media(max-width:645px){
+    .section8{
+        width: 900px;
+    }
+
+    .questions-asked6{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    border-bottom: 1px solid #00A6E033;
+}
+}

@@ -40,6 +40,8 @@ body {
     height: 40px;
 }
 
+
+
 .all-about-pivotal p {
   font-size: 19px;
   /* width: 100%; */
@@ -252,8 +254,14 @@ body {
   .about-pivotal {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
   }
 
+
+
+  .all-about-pivotal p{
+    font-weight: 500;
+  }
 
 .first-showcase{
   width: 50px;
@@ -273,6 +281,7 @@ body {
     font-size: 15px;
   }
 
+
   .fourth-showcase h4{
     font-size: 15px;
   }
@@ -290,7 +299,8 @@ body {
   }
 
   .all-about-pivotal h1{
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 400;
   }
 
 
@@ -325,15 +335,15 @@ body {
  .total-count{
   font-size: 20px;
   width: 600px;
-  margin-left: 20%;
+  margin-left: 35%;
 }
 
 
   .company-images {
     display: flex;
     flex-direction: row;
-    width: 20%;
-    padding-right: 90%;
+    /* width: 20%; */
+    /* padding-right: 90%; */
   }
 
   

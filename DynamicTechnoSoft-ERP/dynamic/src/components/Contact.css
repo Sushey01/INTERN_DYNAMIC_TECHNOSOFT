@@ -150,7 +150,7 @@ button{
 
 @media(max-width:645px) {
 
-
+    
 
     .main-contact{
         width: 850px;
@@ -158,7 +158,10 @@ button{
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        padding: 20px;
     }
+
+  
 
 
     .contact-us{
@@ -173,7 +176,9 @@ button{
 
     .contact-page{
         display: flex;
+        margin-left: 20px;
         flex-direction: column;
+        width: 650px;
         /* margin-left: 40px; */
     }
 
@@ -183,7 +188,7 @@ button{
 
     .contact-content p{
         font-size: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
 
