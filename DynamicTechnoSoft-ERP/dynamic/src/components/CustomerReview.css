@@ -167,13 +167,19 @@ transform: translate(25%, -50%);
 @media(max-width:645px){
 
 
+    .customer-heading{
+        padding-bottom: 30px;
+    }
 
-
-/* 
     .customer-reviews{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+        padding: 20px;
+    }
+
+    .customer1{
+        display: none;
     }
 
     .customer1-image{
@@ -188,6 +194,23 @@ transform: translate(25%, -50%);
     }
 
 
+    .customer2{
+        width: 100%;
+    }
+
+
+    .customer2-container{
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .customer2-container h3{
+        width: 100%;
+        color: #ffffff;
+    }
+
+
     .customer2-image{
         position: static;
         transform: none;
@@ -199,6 +222,11 @@ transform: translate(25%, -50%);
     }
 
 
+    .customer3{
+        display: none;
+    }
+
+
     .customer3-container h3{
         transform: none;
         position: static;
@@ -207,5 +235,5 @@ transform: translate(25%, -50%);
     .customer3-image{
         position: static;
         transform: none;
-    } */
+    }
 }

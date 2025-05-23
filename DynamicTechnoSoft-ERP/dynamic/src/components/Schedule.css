@@ -175,41 +175,90 @@
 
 @media(max-width:645px){
 
-    .section7{
-        width: 900px;
-        /* overflow-x: hidden; */
-    }
   
     .main-chart-container{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        /* padding: 40px; */
-  
+        padding: 20px;
     }
-
-    
-
-    /* .chart-container{
-        width: 100%;
-    } */
-
-
-    .schedule-container{
-        display: flex;
-        flex-direction: column;
-        margin-left: 50px;
-    }
-
-
-
 
 
     .chart-container{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
+
+
+    .two-charts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* .second-chart{
+       padding: 10px;
+
+    } */
+
+       .schedule-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        }
+
+
+        .schedule-form{
+            width: 100%;
+            display: flex;
+        }
+
+        .first-last-name{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .email-address{
+            width: 100%;
+        }
+
+        .email{
+            width: 100%;
+        }
+
+
+        .company-name{
+            width: 100%;
+        }
+
+        .company{
+            width: 100%;
+        }
+
+
+        .condition-message h1{
+            font-size: 14px;
+            text-align: justify;
+            color: #8D8D8D;
+        }
+
+
+        .send-button .schedule-button{
+            width: 100%;
+        }
+
+
+
+
+
+    
 
 
     
