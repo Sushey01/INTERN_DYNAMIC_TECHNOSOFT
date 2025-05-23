@@ -10,7 +10,10 @@ const Contact = () => {
     <section className="section4">
       <div className="main-contact">
         <div className="contact-page">
-          <h1 className="contact-us">Contact Us About</h1>
+
+            <h1 className="contact-us">Contact Us About</h1>
+
+          
           <div className="second-title">
             <h1 style={{
               color:"#00A6E0"
@@ -29,6 +32,8 @@ const Contact = () => {
             </p>
           </div>
 
+
+     
           <div className="contact-method">
             <div className="call-us">
               <img src={Contact1}></img>

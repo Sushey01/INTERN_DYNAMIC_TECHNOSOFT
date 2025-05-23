@@ -62,12 +62,13 @@
 }
 
 .all-in-one{
-    width: 286x;
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     padding-left: 25px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
+    padding-top: 10px;
     background-color: #FFFFFF;
+    width: 287px;
 }
 
 .first-div{
@@ -209,22 +210,33 @@
 
 
 @media(max-width:645px){
-    .section3{
-        width: 900px;
-        /* height: 100vh; */
+
+
+
+    .why-choose-title h1{
+        font-size: 21px;
+        font-weight: 550;
     }
-
-
-
+  
     .choose-pivotal-main{
         justify-self: center;
+        /* width: 0; */
+        padding: 0px;
     }
 
 
-    
+    .container-div{
+       width: 400px;
+       justify-content: flex-end;
+    }
+
+    .blue-container{
+        width: 400px;
+    }
 
     .container-div .choose-pivotal-image img{
-        justify-self: center;
+        width: 350px;
+        margin-left: 0px;
     }
 
 
@@ -234,15 +246,15 @@
      flex-direction: column;
     }
 
-    .blue-container{
-        margin-left: 90px;
-
-    }
 
     .five-reasons{
-        width: 670px;
+        display: grid;
+        grid-template-columns: 1fr;
+       width: 400px;
+       justify-items: center;
     }
 
+  
 
 
     /* .choose-pivotal-image img{

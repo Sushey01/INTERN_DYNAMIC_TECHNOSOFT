@@ -1,14 +1,13 @@
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
 
 
 
 .section4{
     background-color: white;
 }
+
+
+
 
 
 .main-contact{
@@ -153,10 +152,9 @@ button{
     
 
     .main-contact{
-        width: 850px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         gap: 30px;
         padding: 20px;
     }
@@ -169,31 +167,67 @@ button{
     }
 
 
+
+
+
     .second-title{
         padding-bottom: 10px;
+        padding-left: 0px;
     }
 
 
     .contact-page{
         display: flex;
-        margin-left: 20px;
         flex-direction: column;
-        width: 650px;
-        /* margin-left: 40px; */
+        width: 400px;
     }
 
-    .contact-us{
-        text-align: center;
-    }
+
 
     .contact-content p{
-        font-size: 20px;
-        padding-bottom: 30px;
+        font-size: 19px;
+        /* width: 350px; */
+        font-weight: 350;
+        color: #8D8D8D;
+    }
+
+
+    .contact-content{
+        width: 350px;
+    }
+
+
+
+
+
+
+    .contact-method{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px;
+        padding-top: 20px;
+        width: 350px;
+    }
+
+    .call-us{
+        width: 300px;
+    }
+
+    .chat-team{
+        width: 300px;
+    }
+
+    .product-demo{
+        width: 300px;
     }
 
 
     .contact-img-section{
-        margin-right: 180px;
+        padding: 0px;
+    }
+
+    .contact-img-section img{
+        width: 350px;
     }
 
 }

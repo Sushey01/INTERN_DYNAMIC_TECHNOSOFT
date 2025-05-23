@@ -113,7 +113,6 @@
 
 
 .health-care{
-    width: 300px;
     border: 1px solid #EBEBEB;
     padding: 40px;
 }
@@ -168,8 +167,31 @@
 
 @media(max-width:645px){
 
-    .section2{
-        width: 900px;
+    .solution-page{
+        display: flex;
+    }
+
+    .solution-title{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 40px;
+    }
+
+
+    .solution-title h2{
+        font-size: 22px;
+        font-weight: 550;
+        align-self: center;
+    }
+
+
+
+    .solution-title h3{
+        display: flex;
+        font-size: 16px;
+        width: 350px;
+        text-align: center;
     }
 
     .ecommerce-contents img{
@@ -179,10 +201,43 @@
 
     .major-locations{
        display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       padding: 40px;
-       /* justify-items: center; */
+       grid-template-columns: 1fr;
+      padding: 0px;
     }
+
+    .ecommerce-contents span{
+        font-weight: 400;
+    }
+
+    .ecommerce-paragraph p{
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+
+
+    .manufacture-image span{
+        font-weight: 400;
+    }
+
+    .manufacture-paragraph p{
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+
+
+    .healthcare-image span{
+        font-weight: 500;
+    }
+
+    .healthcare-paragraph p{
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+
+
 
 
     .scroll-page{
