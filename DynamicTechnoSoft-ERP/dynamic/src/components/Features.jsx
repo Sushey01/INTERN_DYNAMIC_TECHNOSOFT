@@ -12,9 +12,6 @@ const Features = () => {
     <section className='section1'>
         <div className="modules-features">
             <div className='feature-heading'><h2>Core ERP Modules & Features </h2>
-            {/* <h2>Modules </h2>
-            <h2>&</h2>
-            <h2> Features  </h2> */}
             </div>
             <div className="six-features">
             <div className="first-feature">

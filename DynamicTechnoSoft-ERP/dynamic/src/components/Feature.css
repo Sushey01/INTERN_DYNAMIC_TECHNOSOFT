@@ -134,23 +134,28 @@
 @media (max-width:645px){
 
     
-    .section1{
-        width: 900px;
+   
+
+    .modules-features{
+        padding-left: 0px;
     }
 
 
+    .feature-heading{
+        padding: 20px;
+    }
 
     .feature-heading h2{
-        font-size: 25px;
-        width: 350px;
+        font-size: 22px;
+        /* width: 350px; */
+       
     }
 
     .six-features{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 300px;
-        align-content: center;
-        padding: 20px;
+        grid-template-columns: 1fr;
+        margin-left: 0px;
+        padding: 25px;
     }
 
 }

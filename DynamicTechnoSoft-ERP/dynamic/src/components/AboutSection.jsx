@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutSection.css";
+import Carousel from "./Carousel";
 import AboutImage1 from "../assets/images/about1.png";
 import AboutImage2 from "../assets/images/about2.png";
 import AboutImage3 from "../assets/images/about3.png";
@@ -72,40 +73,19 @@ const AboutSection = () => {
 
     {/* </section> */}
 
+
       <div className="total-company-network">
         <div className="total-customers">
           <p className="total-count">248,000+ customers in over 52 cities grow thier business with PivotalERP</p>
         </div>
-        <div className="company-images">
-          <div className="left-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
-          </div>
-              <div className="company1">
-                <img src={Company1}></img>
-              </div>
-              <div className="company2">
-                <img src={Company2}></img>
-              </div>
-              <div className="company3">
-                <img src={Company3}></img>
-              </div>
-              <div className="company4">
-                <img src={Company4}></img>
-              </div>
-              <div className="company5">
-                <img src={Company5}></img>
-              </div>
-              <div className="company6">
-                <img src={Company6}></img>
-              </div>
-              <div className="company7">
-                <img src={Company7}></img>
-              </div>
-              <div className="right-arrow">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
-              </div>
-        </div>
+
+        <div className="slide-images">
+        <Carousel/>
       </div>
+
+      </div>
+     
+      
     </>
   );
 };
