@@ -160,9 +160,53 @@
 
 
 @media(max-width:645px){
-    .section9{
-        width: 900px;
-    }
+   .footer-container{
+    width: 100%;
+    padding: 20px;
+   }
+
+
+
+
+   .footer-logo{
+    width: 100%;
+    justify-items: center;
+   }
+
+
+   .footer-logo h3{
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: center;
+   }
+
+
+   .company-links{
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    padding-bottom: 20px;
+    padding: 20px;
+   }
+
+   .other-links{
+    display: flex;
+    padding-bottom: 20px;
+    padding: 20px;
+   }
+
+
+   .contact{
+    padding: 20px;
+   }
+
+
+
+
+
+   .last-footer{
+    padding: 10px;
+   }
 }
 
 
