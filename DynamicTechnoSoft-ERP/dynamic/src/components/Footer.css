@@ -210,6 +210,13 @@
 }
 
 
+@media(max-width:820px){
+    .footer-container{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
 
 
 

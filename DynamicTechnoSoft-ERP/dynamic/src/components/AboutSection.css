@@ -394,11 +394,19 @@
   align-items: flex-start;
 }
 
+}
 
 
-  
+@media(max-width:820px){
+  .about-pivotal{
+    width: 100%;
+  }
+
+  .all-about-pivotal{
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+  }
 
 
-  
-  
 }
