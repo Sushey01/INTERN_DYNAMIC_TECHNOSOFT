@@ -250,3 +250,22 @@ button{
 
 
 }
+
+
+@media(max-width:820px){
+    .main-contact{
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .contact-img-section{
+        margin-left: 70px;
+    }
+
+
+
+}

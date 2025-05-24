@@ -253,15 +253,47 @@
         .send-button .schedule-button{
             width: 100%;
         }
+}
 
 
+@media(max-width:1024px){
+    .main-chart-container{
+        width: 100%;
+        padding: 20px;
+    }
 
+    .container{
+        width: 100%;
+        padding: 0px;
+    }
 
+    .chart-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
-    
+    .two-charts{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
+    .schedule-container{
+        width: 100%;
+        padding: 20px;
+    }
 
-    
+    .schedule-form{
+        width: 100%;
+        padding: 0px;
+        align-items: center;
+    }
+
+    .condition-message h1{
+        width: 500px;
+        text-align: center;
+    }
 }
 
 

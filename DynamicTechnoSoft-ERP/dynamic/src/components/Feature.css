@@ -12,7 +12,7 @@
 
 
 
-.modules-feature{
+.modules-features{
    display: flex;
    flex-direction: column;
 }
@@ -158,5 +158,24 @@
         padding: 25px;
     }
 
+}
+
+
+@media(max-width:820px){
+    .modules-features{
+        width: 100%;
+    }
+
+    .six-features{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px;
+        padding: 20px;
+    }
+
+    .feature-button{
+        align-self: center;
+    }
 }
 
