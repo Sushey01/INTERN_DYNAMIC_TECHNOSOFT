@@ -237,3 +237,25 @@ transform: translate(25%, -50%);
         transform: none;
     }
 }
+
+@media(max-width:820px){
+    .customer-reviews{
+        width: 100%;
+    }
+
+    .customer2{
+        width: 100%;
+    }
+
+    .customer2-container{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .customer2-container h3{
+        transform: translateY(-50%);
+        width: 370px;
+        text-align: center;
+    }
+
+}
